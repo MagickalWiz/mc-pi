@@ -3,7 +3,9 @@ from mcpi import block
 from array import *
 
 def init():
-     mc = Minecraft.create()
+     #mc = Minecraft.create()
+     mc = Minecraft.create("127.0.0.1", 4711)
+     mc.setting("world_immutable",True)
      return mc
 
 

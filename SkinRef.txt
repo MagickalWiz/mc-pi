@@ -1,0 +1,3 @@
+Ninja Green: cp char-LEO2.png  ~/Desktop/mcpi-Mgcklwz/data/images/mob/char.png
+Ninja Black: cp char-LEO.png  ~/Desktop/mcpi-Mgcklwz/data/images/mob/char.png
+Dude: cp charMW1.png  ~/Desktop/mcpi-Mgcklwz/data/images/mob/char.png

@@ -2,7 +2,9 @@ from mcpi.minecraft import Minecraft
 from mcpi import block    
 from array import *
 
-mc = Minecraft.create()
+#mc = Minecraft.create()
+mc = Minecraft.create("127.0.0.1", 4711)
+mc.setting("world_immutable",False)
                                             
 x, y, z = mc.player.getPos()
 

@@ -1,4 +1,14 @@
-#API Blocks
+from mcpi.minecraft import Minecraft
+from mcpi import block
+
+mc = Minecraft.create()
+mc.setting("world_immutable",False)
+
+x, y, z = mc.player.getPos()
+
+mc.setBlocks(x,y,z, x,y-1000,z, 46,9)
+
+
 #====================
 #	AIR                   0
 #	STONE                 1
@@ -38,7 +48,7 @@
 #	STONE_SLAB_DOUBLE    43
 #	STONE_SLAB           44
 #	BRICK_BLOCK          45
-#	TNT                  46
+#	TNT                  46  ,3
 #	BOOKSHELF            47
 #	MOSS_STONE           48
 #	OBSIDIAN             49
@@ -72,24 +82,3 @@
 #	FENCE_GATE          107
 #	GLOWING_OBSIDIAN    246
 #	NETHER_REACTOR_CORE 247
-
-
-
-Wool:
-35: White,:
-1: Orange
-2: Magenta
-3: Light blue
-4: Yellow
-5: Lime
-6: Pink
-7: Gray
-8: Light gray
-9: Cyan
-10: Purple
-11: Blue
-12: Brown
-13: Green
-14: Red
-15: Black
-16: White

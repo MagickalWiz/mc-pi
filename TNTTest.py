@@ -1,3 +1,13 @@
+from mcpi.minecraft import Minecraft
+from mcpi import block	  
+
+mc = Minecraft.create()
+                                            
+x, y, z = mc.player.getPos()  
+zz = z + 2
+
+mc.setBlocks(x,y, zz, x+1, y+1, zz+1, block.GLOWING_OBSIDIAN.id)
+
 #API Blocks
 #====================
 #	AIR                   0
@@ -72,24 +82,3 @@
 #	FENCE_GATE          107
 #	GLOWING_OBSIDIAN    246
 #	NETHER_REACTOR_CORE 247
-
-
-
-Wool:
-35: White,:
-1: Orange
-2: Magenta
-3: Light blue
-4: Yellow
-5: Lime
-6: Pink
-7: Gray
-8: Light gray
-9: Cyan
-10: Purple
-11: Blue
-12: Brown
-13: Green
-14: Red
-15: Black
-16: White

@@ -1,3 +1,14 @@
+from mcpi.minecraft import Minecraft
+from mcpi import block	  
+
+mc = Minecraft.create()
+                                            
+x, y, z = mc.player.getPos()  
+
+
+mc.setBlocks(x,y, z+1, x+20, y+3, z+25, block.STONE.id)
+mc.setBlocks(x+1,y, z+2, x+19, y+3, z+24, block.AIR.id)
+
 #API Blocks
 #====================
 #	AIR                   0
@@ -73,23 +84,3 @@
 #	GLOWING_OBSIDIAN    246
 #	NETHER_REACTOR_CORE 247
 
-
-
-Wool:
-35: White,:
-1: Orange
-2: Magenta
-3: Light blue
-4: Yellow
-5: Lime
-6: Pink
-7: Gray
-8: Light gray
-9: Cyan
-10: Purple
-11: Blue
-12: Brown
-13: Green
-14: Red
-15: Black
-16: White
