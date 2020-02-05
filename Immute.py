@@ -1,3 +1,3 @@
 from mcpi.minecraft import Minecraft
 
-mc.setting("world_immutable",False)
+mc.setting("world_immutable",True)
