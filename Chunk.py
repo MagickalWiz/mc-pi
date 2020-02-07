@@ -7,4 +7,4 @@ mc = Minecraft.create()
                                             
 x, y, z = mc.player.getPos()  
 
-mc.setBlocks(x,y, z, x+20, y+20, z+20, block.AIR.id)
+mc.setBlocks(x,y, z, x+25, y+25, z+25, block.AIR.id)
