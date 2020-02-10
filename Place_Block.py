@@ -1,8 +1,8 @@
 from mcpi.minecraft import Minecraft
 from mcpi import block
 
-#mc = Minecraft.create("192.168.7.97", 4711)
-mc = Minecraft.create("127.0.0.1", 4711)
+mc = Minecraft.create("192.168.7.142", 4711)
+#mc = Minecraft.create("127.0.0.1", 4711)
 mc.setting("world_immutable",False)
 
 x, y, z = mc.player.getPos()
