@@ -10,7 +10,7 @@ def init():
 
 def While(mc,x,y,z,):
 	done = 0
-	mc.postToChat("Invis w/ Truesight")
+	mc.postToChat("Invis")
 	while(done < 500):
 		h = random.randint(0,20)
 		l = random.randint(0,20)
