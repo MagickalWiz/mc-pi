@@ -15,16 +15,16 @@ def clearAir(mc,x,y,z):
 
 def matrix(mc,x,y,z):
   
-  X = ["1000000002",
-       "0000000000",
-       "0000000000",
-       "0000000000",
-       "0000005000",
-       "0000000000",
-       "0005000000",
-       "0000000000",
-       "0000000000",
-       "4000000003"]
+  X = ["0004444400",
+  "0044444440",
+  "0444444444",
+  "4444444000",
+  "4444000000",
+  "4444444000",
+  "0444444444",
+  "0044444440",
+  "0004444400",
+  "0000000000"]
       #"123456789A"
  
   y1 = 10
@@ -34,17 +34,17 @@ def matrix(mc,x,y,z):
       print(X[h][k],end="") # debug
       #print(h,k," ",end="")
       theBlock = X[h][k]
-      c = 0
+      c = 0  # wool 35,0  WHITE
       if (theBlock == "1"):
-        c = random.randint(0,19)
+        c = 1 # wool 35,1  ORANGE
       if (theBlock == "2"):
-        c = random.randint(20,39)
+        c = 2 # wool 35,2  DARK PINK 
       if (theBlock == "3"):
-        c = random.randint(40,59)
+        c = 3 # wool 35,3  LIGHT BLUE 
       if (theBlock == "4"):
-        c = random.randint(60,79)
+        c = 4 # wool 35,4  YELLOW
       if (theBlock == "5"):
-        c = random.randint(80,98)
+        c = 5 # wool 35,5  GREEN
       mc.setBlock(x1-x,y1+y,z,35,c)
       x1 = x1 - 1
     y1 = y1 - 1
@@ -54,8 +54,23 @@ def main():
   mc = init()
   x,y,z = mc.player.getPos()
   clearAir(mc,x,y,z)
-  matrix(mc,x,y,z+5)
+  matrix(mc,x,y,z)
   mc.player.setPos(x,y,z-5)
 
 if __name__ == "__main__":
   main()
+
+'''
+PACMAN
+
+  "0004444400",
+  "0044444440",
+  "0444444444",
+  "4444444000",
+  "4444000000",
+  "4444444000",
+  "0444444444",
+  "0044444440",
+  "0004444400"
+
+'''
