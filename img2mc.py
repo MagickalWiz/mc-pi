@@ -6,7 +6,7 @@ import sys
 from PIL import Image
 import matplotlib.pyplot as plt
 import math
-colours = [ (255, 255, 255, "00"),
+colors = [ (255, 255, 255, "00"),
             (255, 0, 0, "14"),
             (255, 128, 0, "01"),
             (0, 255, 0, "13"),
@@ -25,13 +25,13 @@ colours = [ (255, 255, 255, "00"),
             
 
 
-def nearest_colour( subjects, query ):
+def nearest_color( subjects, query ):
     return min(subjects,key = lambda subject:sum((s - q) ** 2 for s,q in zip( subject, query ) ) )
 
 
-#print( nearest_colour( colours, (64, 0, 0) ) ) # dark red
-#print( nearest_colour( colours, (0, 192, 0) ) ) # green
-#print( nearest_colour( colours, (255, 255, 64) ) ) # white
+#print( nearest_color( colors, (64, 0, 0) ) ) # dark red
+#print( nearest_color( colors, (0, 192, 0) ) ) # green
+#print( nearest_color( colors, (255, 255, 64) ) ) # white
 
 def init():
 	if len(sys.argv) <= 1:
@@ -89,14 +89,14 @@ def main():
 			bloop=(img.getpixel(coord))
 			print(bloop)
 			
-			woolcolor=str(nearest_colour(colours, bloop))
+			woolcolor=str(nearest_color(colors, bloop))
 			#print(woolcolor)
 			woolcolor=(woolcolor[-4:])
 			woolcolor=(woolcolor[:2])
 			print(woolcolor)
 			#lst.append(woolcolor)
 			mc.setBlock(x+5+i,y+j,z,35,int(woolcolor))
-			#print(nearest_colour(colours, px[i,j]))
+			#print(nearest_color(colors, px[i,j]))
 	#print(lst)		
 	print(img.size)
 	
